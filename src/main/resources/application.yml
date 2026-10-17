@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: "1БКС24106"
+  sql:
+    init:
+      mode: never
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+      use-big-decimal-for-floats: true
+
+server:
+  address: 127.0.0.1
+
+rbpo:
+  database:
+    url: "${RBPO_DB_URL:jdbc:h2:file:./data/rbpo-lab4}"
+    owner-user: "${RBPO_DB_OWNER:rbpo_owner}"
+    owner-password: "${RBPO_DB_OWNER_PASSWORD}"
+    app-user: "${RBPO_DB_USER:rbpo_app}"
+    app-password: "${RBPO_DB_PASSWORD}"
+    seed-data: true
+  security:
+    manager-username: "${RBPO_MANAGER_USERNAME:manager}"
+    manager-password: "${RBPO_MANAGER_PASSWORD}"
+    manager-display-name: "${RBPO_MANAGER_NAME:Менеджер}"

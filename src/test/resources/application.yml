@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: "1БКС24106"
+  sql:
+    init:
+      mode: never
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+      use-big-decimal-for-floats: true
+
+rbpo:
+  database:
+    url: "jdbc:h2:mem:lab4test"
+    owner-user: test_owner
+    owner-password: test_owner_password
+    app-user: test_app
+    app-password: test_app_password
+    seed-data: false
+  security:
+    manager-username: manager
+    manager-password: ManagerPass123
+    manager-display-name: Test Manager

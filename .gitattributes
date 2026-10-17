@@ -1,0 +1,6 @@
+# .gitattributes: текстовые исходники хранятся и извлекаются с переносами LF.
+* text=auto eol=lf
+# .gitattributes: Unix-скрипт Maven Wrapper требует переносы LF.
+mvnw text eol=lf
+# .gitattributes: Windows-скрипт Maven Wrapper использует переносы CRLF.
+mvnw.cmd text eol=crlf
